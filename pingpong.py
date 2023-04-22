@@ -37,6 +37,8 @@ player2 = Player2('rocket.png', 660, 190, 10, 25, 100)
 class Ball(GameSprite):
     def __init__(self, image_file, player_x, player_y, player_speed, width, height):
         super().__init__(image_file, player_x, player_y, player_speed, width, height)
+        self.image.fill((192,192,192))
+        draw.circle(self.image, (255, 0 , 0), (height // 2, width // 2), height // 2)
         self.speed_x = player_speed
         self.speed_y = player_speed
     def update(self):
